@@ -51,7 +51,7 @@ class ApartmentListSpider(scrapy.Spider):
         'https://www.apartments.com/greenville-sc-29611/1000-to-2000',
         'https://www.apartments.com/haverhill-ma-01832/1000-to-2000',
         'https://www.apartments.com/haverhill-ma-01830/1000-to-2000'
-    ]
+            ]
 
     def parse(self, response):
         print("procesing:"+response.url)
