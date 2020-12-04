@@ -4,7 +4,7 @@ import scrapy
 class ApartmentListSpider(scrapy.Spider):
     name = 'apartment_list'
     allowed_domains = ['https://www.apartments.com']
-
+    
     start_urls = [
         'https://www.apartments.com/chula-vista-ca-91910/1000-to-2000',
         'https://www.apartments.com/sacramento-ca-95814/1000-to-2000',
@@ -42,18 +42,17 @@ class ApartmentListSpider(scrapy.Spider):
         'https://www.apartments.com/new-port-richey-fl-34654/1000-to-2000',
         'https://www.apartments.com/calumet-city-il-60409/1000-to-2000',
         'https://www.apartments.com/hollywood-fl-33020/1000-to-2000'
-
-
-    ]
+            ]
 
     def parse(self, response):
         print("procesing:"+response.url)
         #Extract data using css selectors
-        address=response.xpath("//div[@class='location']/text()").extract()
-        phone_number=response.xpath("//div[@class='phone']/span/text()").extract()
-        link_url=response.xpath("//div[@class='placardContainer']//li//article//@data-url").extract()
+        propertyname = response.xpath("//div[@class='property-title']/span/text()").extract()
+        address=response.xpath("//div[@class='property-address js-url']/text()").extract()
+        phone_number=response.xpath("//div[@class='phone-wrapper']/a/span/text()").extract()
+        link_url=response.xpath("//div[@class='property-information']/a/@href").extract()
 
-        row_data=zip(address,phone_number,link_url)
+        row_data=zip(propertyname,address,phone_number,link_url)
 
         #Making extracted data row wise
         for item in row_data:
@@ -61,9 +60,10 @@ class ApartmentListSpider(scrapy.Spider):
             scraped_info = {
                 #key:value
                 'page':response.url,
-                'address' : item[0], #item[0] means product in the list and so on, index tells what value to assign
-                'phone_number' : item[1],
-                'link_url' : item[2]
+                'name':item[0],
+                'address' : item[1], #item[0] means product in the list and so on, index tells what value to assign
+                'phone_number' : item[2],
+                'link_url' : item[3]
             }
 
             #yield or give the scraped info to scrapy
