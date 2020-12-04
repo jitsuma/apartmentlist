@@ -4,64 +4,56 @@ import scrapy
 class ApartmentListSpider(scrapy.Spider):
     name = 'apartment_list'
     allowed_domains = ['https://www.apartments.com']
-    
+
     start_urls = [
-        'https://www.apartments.com/fontana-ca-92336/1000-to-2000',
-        'https://www.apartments.com/riverside-ca-92507/1000-to-2000',
-        'https://www.apartments.com/hemet-ca-92543/1000-to-2000',
-        'https://www.apartments.com/riverside-ca-92501/1000-to-2000',
-        'https://www.apartments.com/hemet-ca-92545/1000-to-2000',
-        'https://www.apartments.com/chesapeake-va-23321/1000-to-2000',
-        'https://www.apartments.com/memphis-tn-38116/1000-to-2000',
-        'https://www.apartments.com/memphis-tn-38122/1000-to-2000',
-        'https://www.apartments.com/albuquerque-nm-87110/1000-to-2000',
-        'https://www.apartments.com/memphis-tn-38111/1000-to-2000',
-        'https://www.apartments.com/memphis-tn-38108/1000-to-2000',
-        'https://www.apartments.com/washington-dc-20012/1000-to-2000',
-        'https://www.apartments.com/washington-dc-20015/1000-to-2000',
-        'https://www.apartments.com/fort-pierce-fl-34951/1000-to-2000',
-        'https://www.apartments.com/jacksonville-fl-32209/1000-to-2000',
-        'https://www.apartments.com/north-hollywood-ca-91605/1000-to-2000',
+        'https://www.apartments.com/chula-vista-ca-91910/1000-to-2000',
+        'https://www.apartments.com/sacramento-ca-95814/1000-to-2000',
+        'https://www.apartments.com/pompano-beach-fl-33069/1000-to-2000',
+        'https://www.apartments.com/brea-ca-92821/1000-to-2000',
+        'https://www.apartments.com/rowland-heights-ca-91748/1000-to-2000',
+        'https://www.apartments.com/redding-ca-96001/1000-to-2000',
+        'https://www.apartments.com/lake-worth-fl-33467/1000-to-2000',
+        'https://www.apartments.com/lake-worth-fl-33462/1000-to-2000',
+        'https://www.apartments.com/redlands-ca-92374/1000-to-2000',
+        'https://www.apartments.com/colton-ca-92324/1000-to-2000',
+        'https://www.apartments.com/los-angeles-ca-90063/1000-to-2000',
+        'https://www.apartments.com/las-vegas-nv-89156/1000-to-2000',
+        'https://www.apartments.com/mesa-az-85210/1000-to-2000',
         'https://www.apartments.com/desoto-tx-75115/1000-to-2000',
-        'https://www.apartments.com/sauk-rapids-mn-56379/1000-to-2000',
-        'https://www.apartments.com/bronx-ny-10463/1000-to-2000',
-        'https://www.apartments.com/lancaster-ca-93536/1000-to-2000',
-        'https://www.apartments.com/charleston-sc-29407/1000-to-2000',
-        'https://www.apartments.com/los-angeles-ca-90028/1000-to-2000',
-        'https://www.apartments.com/campbell-ca-95008/1000-to-2000',
-        'https://www.apartments.com/sunnyvale-ca-94086/1000-to-2000',
-        'https://www.apartments.com/jonesboro-ga-30236/1000-to-2000',
-        'https://www.apartments.com/indianapolis-in-46229/1000-to-2000',
-        'https://www.apartments.com/palm-coast-fl-32137/1000-to-2000',
-        'https://www.apartments.com/fruitland-park-fl-34731/1000-to-2000',
-        'https://www.apartments.com/tampa-fl-33610/1000-to-2000',
-        'https://www.apartments.com/saint-louis-mo-63109/1000-to-2000',
+        'https://www.apartments.com/cherry-hill-nj-08034/1000-to-2000',
+        'https://www.apartments.com/flushing-ny-11358/1000-to-2000',
+        'https://www.apartments.com/atlanta-ga-30349/1000-to-2000',
+        'https://www.apartments.com/brooklyn-ny-11203/1000-to-2000',
+        'https://www.apartments.com/mcdonough-ga-30253/1000-to-2000',
+        'https://www.apartments.com/burnsville-mn-55337/1000-to-2000',
+        'https://www.apartments.com/dallas-tx-75208/1000-to-2000',
+        'https://www.apartments.com/miami-fl-33144/1000-to-2000',
+        'https://www.apartments.com/new-port-richey-fl-34653/1000-to-2000',
+        'https://www.apartments.com/chicago-il-60613/1000-to-2000',
+        'https://www.apartments.com/chicago-il-60640/1000-to-2000',
+        'https://www.apartments.com/upland-ca-91786/1000-to-2000',
+        'https://www.apartments.com/atlanta-ga-30316/1000-to-2000',
+        'https://www.apartments.com/atlanta-ga-30311/1000-to-2000',
+        'https://www.apartments.com/jacksonville-fl-32224/1000-to-2000',
+        'https://www.apartments.com/jacksonville-fl-32209/1000-to-2000',
+        'https://www.apartments.com/chicago-il-60619/1000-to-2000',
         'https://www.apartments.com/tallahassee-fl-32304/1000-to-2000',
-        'https://www.apartments.com/saint-louis-mo-63116/1000-to-2000',
-        'https://www.apartments.com/south-bend-in-46619/1000-to-2000',
-        'https://www.apartments.com/south-bend-in-46615/1000-to-2000',
-        'https://www.apartments.com/charlotte-nc-28212/1000-to-2000',
-        'https://www.apartments.com/tampa-fl-33604/1000-to-2000',
-        'https://www.apartments.com/tampa-fl-33617/1000-to-2000',
-        'https://www.apartments.com/detroit-mi-48238/1000-to-2000',
-        'https://www.apartments.com/tampa-fl-33614/1000-to-2000',
-        'https://www.apartments.com/greenville-sc-29615/1000-to-2000',
-        'https://www.apartments.com/greenville-sc-29605/1000-to-2000',
-        'https://www.apartments.com/grand-rapids-mi-49503/1000-to-2000',
-        'https://www.apartments.com/greenville-sc-29611/1000-to-2000',
-        'https://www.apartments.com/haverhill-ma-01832/1000-to-2000',
-        'https://www.apartments.com/haverhill-ma-01830/1000-to-2000'
-            ]
+        'https://www.apartments.com/fort-wayne-in-46804/1000-to-2000',
+        'https://www.apartments.com/new-port-richey-fl-34654/1000-to-2000',
+        'https://www.apartments.com/calumet-city-il-60409/1000-to-2000',
+        'https://www.apartments.com/hollywood-fl-33020/1000-to-2000'
+
+
+    ]
 
     def parse(self, response):
         print("procesing:"+response.url)
         #Extract data using css selectors
-        propertyname = response.xpath("//div[@class='property-title']/span/text()").extract()
-        address=response.xpath("//div[@class='property-address js-url']/text()").extract()
-        phone_number=response.xpath("//div[@class='phone-wrapper']/a/span/text()").extract()
-        link_url=response.xpath("//div[@class='property-information']/a/@href").extract()
+        address=response.xpath("//div[@class='location']/text()").extract()
+        phone_number=response.xpath("//div[@class='phone']/span/text()").extract()
+        link_url=response.xpath("//div[@class='placardContainer']//li//article//@data-url").extract()
 
-        row_data=zip(propertyname,address,phone_number,link_url)
+        row_data=zip(address,phone_number,link_url)
 
         #Making extracted data row wise
         for item in row_data:
@@ -69,10 +61,9 @@ class ApartmentListSpider(scrapy.Spider):
             scraped_info = {
                 #key:value
                 'page':response.url,
-                'name':item[0],
-                'address' : item[1], #item[0] means product in the list and so on, index tells what value to assign
-                'phone_number' : item[2],
-                'link_url' : item[3]
+                'address' : item[0], #item[0] means product in the list and so on, index tells what value to assign
+                'phone_number' : item[1],
+                'link_url' : item[2]
             }
 
             #yield or give the scraped info to scrapy
