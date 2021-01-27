@@ -6,6 +6,12 @@ class ApartmentListSpider(scrapy.Spider):
     allowed_domains = ['https://www.apartments.com']
     
     start_urls = [
+        'https://www.apartments.com/marietta-ga-30066/1000-to-2000',
+        'https://www.apartments.com/atlanta-ga-30354/1000-to-2000',
+        'https://www.apartments.com/decatur-ga-30032/1000-to-2000',
+        'https://www.apartments.com/stone-mountain-ga-30088/1000-to-2000',
+        'https://www.apartments.com/tucker-ga-30084/1000-to-2000',
+        'https://www.apartments.com/lilburn-ga-30047/1000-to-2000',
         'https://www.apartments.com/eastvale-ca-92880/1000-to-2000',
         'https://www.apartments.com/rancho-cucamonga-ca-91730/1000-to-2000',
         'https://www.apartments.com/titusville-fl-32796/1000-to-2000',
