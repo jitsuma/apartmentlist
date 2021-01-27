@@ -6,21 +6,32 @@ class ApartmentListSpider(scrapy.Spider):
     allowed_domains = ['https://www.apartments.com']
     
     start_urls = [
-        'https://www.apartments.com/redding-ca-96001/1000-to-2000',
-        'https://www.apartments.com/phoenix-az-85020/1000-to-2000',
-        'https://www.apartments.com/las-vegas-nv-89101/1000-to-2000',
-        'https://www.apartments.com/lake-worth-fl-33460/1000-to-2000',
-        'https://www.apartments.com/springdale-ar-72764/1000-to-2000',
-        'https://www.apartments.com/vancouver-wa-98661/1000-to-2000',
-        'https://www.apartments.com/greenwood-in-46143/1000-to-2000',
-        'https://www.apartments.com/san-jose-ca-95128/1000-to-2000',
-        'https://www.apartments.com/miami-fl-33169/1000-to-2000',
-        'https://www.apartments.com/victorville-ca-92394/1000-to-2000',
-        'https://www.apartments.com/haines-city-fl-33844/1000-to-2000',
-        'https://www.apartments.com/lake-wales-fl-33853/1000-to-2000',
-        'https://www.apartments.com/palmdale-ca-93552/1000-to-2000',
-        'https://www.apartments.com/henderson-nv-89015/1000-to-2000',
-        'https://www.apartments.com/philadelphia-pa-19147/1000-to-2000'
+        'https://www.apartments.com/eastvale-ca-92880/1000-to-2000',
+        'https://www.apartments.com/rancho-cucamonga-ca-91730/1000-to-2000',
+        'https://www.apartments.com/titusville-fl-32796/1000-to-2000',
+        'https://www.apartments.com/titusville-fl-32780/1000-to-2000',
+        'https://www.apartments.com/conroe-tx-77301/1000-to-2000',
+        'https://www.apartments.com/sacramento-ca-95814/1000-to-2000',
+        'https://www.apartments.com/cincinnati-oh-45237/1000-to-2000',
+        'https://www.apartments.com/crum-lynne-pa-19022/1000-to-2000',
+        'https://www.apartments.com/concord-nc-28027/1000-to-2000',
+        'https://www.apartments.com/charlotte-nc-28208/1000-to-2000',
+        'https://www.apartments.com/charlotte-nc-28217/1000-to-2000',
+        'https://www.apartments.com/surprise-az-85374/1000-to-2000',
+        'https://www.apartments.com/columbus-oh-43206/1000-to-2000',
+        'https://www.apartments.com/long-beach-ca-90804/1000-to-2000',
+        'https://www.apartments.com/dothan-al-36301/1000-to-2000',
+        'https://www.apartments.com/winter-haven-fl-33881/1000-to-2000',
+        'https://www.apartments.com/cape-coral-fl-33990/1000-to-2000',
+        'https://www.apartments.com/louisville-ky-40216/1000-to-2000',
+        'https://www.apartments.com/long-beach-ca-90813/1000-to-2000',
+        'https://www.apartments.com/dade-city-fl-33525/1000-to-2000',
+        'https://www.apartments.com/houston-tx-77061/1000-to-2000',
+        'https://www.apartments.com/houston-tx-77033/1000-to-2000',
+        'https://www.apartments.com/houston-tx-77048/1000-to-2000',
+        'https://www.apartments.com/philadelphia-pa-19134/1000-to-2000',
+        'https://www.apartments.com/lithonia-ga-30058/1000-to-2000',
+        'https://www.apartments.com/pensacola-fl-32504/1000-to-2000'
 
         
             ]
