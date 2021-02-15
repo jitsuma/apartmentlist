@@ -206,10 +206,6 @@ class ApartmentListSpider(scrapy.Spider):
         'https://www.apartments.com/ann-arbor-mi-48104/1000-to-2000',
         'https://www.apartments.com/charlotte-nc-28211/1000-to-2000'
 
-
-
-
-
             ]
 
     def parse(self, response):
